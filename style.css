@@ -1,0 +1,326 @@
+/* Stile Generale del Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Un font più moderno */
+    background-color: #2e3b4e;
+    /* Sfondo scuro elegante */
+    color: #e0e6ed;
+    /* Testo chiaro per contrasto */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Occupo l'intera altezza dello schermo */
+    line-height: 1.6;
+}
+
+/* Stile del Contenitore Principale */
+.container {
+    background-color: #222b37;
+    /* Sfondo del contenitore leggermente più chiaro del body */
+    padding: 30px;
+    border-radius: 15px;
+    /* Bordi arrotondati */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    /* Ombra più pronunciata */
+    width: 100%;
+    max-width: 900px;
+    /* Larghezza massima per desktop */
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    /* Include padding e border nella larghezza */
+}
+
+/* Stile dell'Intestazione (Titolo e Descrizione) */
+h1 {
+    color: #66bb6a;
+    /* Verde brillante per il titolo principale */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.description {
+    color: #b0bec5;
+    /* Grigio chiaro per la descrizione */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Stile per i Titoli degli Ambienti */
+h2 {
+    color: #66bb6a;
+    /* Stesso verde del titolo principale */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3a475a;
+    /* Linea separatrice */
+    padding-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Stile per i Gruppi di Domande */
+.question-group {
+    background-color: #2c3643;
+    /* Sfondo leggermente diverso per ogni domanda */
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-group:hover {
+    transform: translateY(-3px);
+    /* Effetto leggero al passaggio del mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e0e6ed;
+    font-size: 1.05em;
+}
+
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #3a475a;
+    border-radius: 8px;
+    background-color: #3a475a;
+    /* Sfondo del select */
+    color: #e0e6ed;
+    /* Colore del testo nel select */
+    font-size: 1em;
+    cursor: pointer;
+    appearance: none;
+    /* Rimuove lo stile di default del browser */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23e0e6ed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    /* Freccia personalizzata */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #66bb6a;
+    /* Bordo verde al focus */
+    outline: none;
+}
+
+/* Stile per i Pulsanti */
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    /* Permette ai pulsanti di stare sulla stessa riga */
+    justify-content: center;
+    /* Centra i pulsanti */
+    gap: 20px;
+    /* Spazio tra i pulsanti */
+}
+
+button {
+    background-color: #66bb6a;
+    /* Verde per il pulsante principale */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 150, 0, 0.4);
+    /* Ombra per il pulsante */
+}
+
+button:hover {
+    background-color: #5cb85d;
+    /* Verde più scuro al passaggio del mouse */
+    transform: translateY(-2px);
+    /* Effetto al passaggio del mouse */
+    box-shadow: 0 6px 20px rgba(0, 150, 0, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+    /* Effetto al click */
+    box-shadow: 0 2px 10px rgba(0, 150, 0, 0.3);
+}
+
+#reset-btn {
+    background-color: #f44336;
+    /* Rosso per il pulsante Reset */
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+#reset-btn:hover {
+    background-color: #da190b;
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.5);
+}
+
+#reset-btn:active {
+    box-shadow: 0 2px 10px rgba(244, 67, 54, 0.3);
+}
+
+
+/* Stile della Sezione Risultati */
+.results-section {
+    background-color: #222b37;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+    text-align: center;
+    border-top: 3px solid #66bb6a;
+    /* Bordo superiore verde */
+}
+
+.results-section h2 {
+    color: #66bb6a;
+    margin-bottom: 20px;
+    border-bottom: none;
+    /* Rimuove la linea di separazione extra */
+}
+
+.score-display {
+    font-size: 3em;
+    font-weight: bold;
+    color: #66bb6a;
+    /* Grande punteggio verde */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(102, 187, 106, 0.5);
+    /* Piccola ombra per il testo del punteggio */
+}
+
+.evaluation-message {
+    font-size: 1.3em;
+    color: #e0e6ed;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Stile per i Grafici */
+.chart-container {
+    width: 100%;
+    max-width: 700px;
+    /* Larghezza massima del grafico */
+    margin: 30px auto 0 auto;
+    /* Centra il contenitore del grafico */
+    background-color: #2c3643;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    /* AGGIUNGI QUESTA RIGA O MODIFICALA SE ESISTE */
+    max-height: 400px;
+    /* Limita l'altezza massima del contenitore */
+    position: relative;
+    /* Importante per posizionamento assoluto se canvas fosse in quella modalità */
+}
+
+/* Potrebbe essere utile anche per il canvas stesso, anche se di solito il contenitore è sufficiente */
+.chart-container canvas {
+    max-height: 360px;
+    /* Leggermente meno del contenitore per il padding */
+}
+
+/* ... il resto del tuo CSS ... */
+}
+
+/* Utilità - Nascondi elemento */
+.hidden {
+    display: none;
+}
+
+/* Media Queries per la Responsività */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container,
+    .results-section {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    select {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .button-group {
+        flex-direction: column;
+        /* Impila i pulsanti su schermi piccoli */
+        gap: 15px;
+    }
+
+    button {
+        width: 80%;
+        /* Larghezza fissa per i pulsanti impilati */
+        margin: 0 auto;
+        /* Centra i pulsanti */
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    .score-display {
+        font-size: 2.5em;
+    }
+
+    .evaluation-message {
+        font-size: 1.1em;
+    }
+
+    .chart-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container,
+    .results-section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 90%;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valutazione Qualità del Servizio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Valutazione Qualità del Servizio</h1>
+        <p class="description">Rispondi alle seguenti domande per valutare la qualità del tuo settore giovanile.</p>
+
+        <div id="questions-container">
+        </div>
+
+        <div class="button-group"> <button id="calculate-score-btn">Calcola Punteggio</button>
+            <button id="reset-btn" class="hidden">Nuova Valutazione</button>
+        </div>
+
+    </div>
+
+    <div id="results" class="results-section hidden">
+        <h2>Risultato Valutazione</h2>
+        <p>Punteggio totale: <span class="score-display" id="total-score">0</span>%</p>
+        <p class="evaluation-message" id="evaluation-message"></p>
+
+        <div class="chart-container">
+            <h3>Punteggio Generale</h3>
+            <canvas id="qualityChart"></canvas>
+        </div>
+
+        <div class="chart-container" style="margin-top: 40px;">
+            <h3>Punteggi per Ambito</h3>
+            <canvas id="environmentChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
